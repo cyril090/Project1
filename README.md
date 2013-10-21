@@ -3,13 +3,13 @@ Project1
 
 Especes piscicoles: 
 
-Truites
-Carpes
-Brochets
-Tanches
-Bremes
-Gardons
-Perches
+Truites,
+Carpes,
+Brochets,
+Tanches,
+Bremes,
+Gardons,
+Perches,
 
 Paramètres à tenir en compte:
 
