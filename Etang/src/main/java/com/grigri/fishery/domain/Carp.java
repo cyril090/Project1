@@ -5,10 +5,12 @@ public class Carp {
 
 	private final int age;
 	private final int lengthInCms;
+	private final int weightInKilo;
     
-	public Carp(int age, int lengthInCms) {
+	public Carp(int age, int lengthInCms, int weightInKilo) {
         this.age = age;
         this.lengthInCms = lengthInCms;
+        this.weightInKilo = weightInKilo;
     }
 	
 	public int getAge() {
@@ -18,5 +20,8 @@ public class Carp {
 	public int getLengthInCms() {
         return lengthInCms;
     }
-
+	public int weightInKilo() {
+		return weightInKilo;
+	}
+	
 }
