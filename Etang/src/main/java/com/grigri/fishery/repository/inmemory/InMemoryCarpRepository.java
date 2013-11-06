@@ -12,11 +12,19 @@ import com.grigri.fishery.repository.CarpRepository;
 public class InMemoryCarpRepository implements CarpRepository {
 
     // TODO instantier la variable membre carps avec le type java.util.concurrent.ConcurrentHashMap.
-    private ConcurrentMap<Long, Carp> carps = null;
+	
+	private java.util.concurrent.ConcurrentHashMap membreCarps;
+	
+	private ConcurrentMap<Long, Carp> carps = null;
     
     private AtomicLong idGenerator = new AtomicLong(0);
     
     public Carp save(Carp carp) {
+    	
+    	if (carp.getId() == null) {
+    		long Id = idGenerator.incrementAndGet();
+    		carp.setId(Id); 
+    	}
         // TODO si l'id de la carpe est null, appeler la method incrementAndGet de l'idGenerator,
         // et setter l'id sur l'objet carp (utiliser la methode setId).
         // TODO ajouter la carp a la map 'carps', en appelant la methode put
@@ -27,6 +35,7 @@ public class InMemoryCarpRepository implements CarpRepository {
     public List<Carp> findAll() {
         // TODO creer une variable de type ArrayList, et comme parametre du constructeur, utiliser
         // toutes les 'values' de la map 'carps'.
+    	
         List<Carp> result = null;
         
         // Sorts the carps.
@@ -37,7 +46,7 @@ public class InMemoryCarpRepository implements CarpRepository {
         });
         
         // TODO renvoyer la list des carpes.
-        // test
+        
         return null;
     }
 

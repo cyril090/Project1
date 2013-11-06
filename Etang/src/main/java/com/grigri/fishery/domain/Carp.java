@@ -30,7 +30,7 @@ public class Carp {
         return lengthInCms;
     }
 	
-	public int weightInKilo() { // TODO renommer ceci pour utiliser la convention (get...)
+	public int getWeightInKilo() { // TODO renommer ceci pour utiliser la convention (get...)
 		return weightInKilo;
 	}
 	
