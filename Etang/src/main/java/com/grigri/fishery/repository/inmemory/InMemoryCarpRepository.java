@@ -33,10 +33,9 @@ public class InMemoryCarpRepository implements CarpRepository {
 
     public List<Carp> findAll() {
     	
-    	ArrayList carpList = new ArrayList (carps.values()); //ici j'ai pas trop compris la partie mettre les values de la map carps comme paramètre du constructeur... 
-    	
-     
-        List<Carp> result = null;
+    	ArrayList<Carp> carpList = new ArrayList<Carp> (carps.values());
+    	     
+        List<Carp> result = carpList;
         
         // Sorts the carps.
         Collections.sort(result, new Comparator<Carp>() {
