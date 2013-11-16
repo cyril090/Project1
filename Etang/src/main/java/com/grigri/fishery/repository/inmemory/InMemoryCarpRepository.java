@@ -1,10 +1,10 @@
 package com.grigri.fishery.repository.inmemory;
 
-import java.util.ArrayList; // j'ai du l'importer
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
-import java.util.concurrent.ConcurrentHashMap; //j'ai du l'importer
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -15,9 +15,12 @@ public class InMemoryCarpRepository implements CarpRepository {
 
     private ConcurrentMap<Long, Carp> carps = new ConcurrentHashMap<Long, Carp>();
 	
-	// private ConcurrentMap<Long, Carp> carps = null;
-    
     private AtomicLong idGenerator = new AtomicLong(0);
+    
+    {
+        carps.put(1L, new Carp(1L, 2, 40, 6));
+        carps.put(2L, new Carp(2L, 1, 30, 7));
+    }
     
     public Carp save(Carp carp) {
     	

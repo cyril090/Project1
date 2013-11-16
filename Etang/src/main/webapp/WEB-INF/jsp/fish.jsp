@@ -1,3 +1,6 @@
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -23,21 +26,13 @@
         	<th>Length</th>
         	<th>Weight</th>
         </tr>
-       	<tr>
-       		<td>3</td>
-       		<td>30</td>
-       		<td>0.6</td>
-       	</tr>
-       	<tr>
-       		<td>12</td>
-       		<td>45</td>
-       		<td>6</td>
-       	</tr>
-       	<tr>
-       		<td>9</td>
-       		<td>39</td>
-       		<td>4</td>
-       	</tr>
+        <c:forEach items="${carps}" var="carp">
+            <tr>
+                <td>${carp.age}</td>
+                <td>${carp.lengthInCms}</td>
+                <td>${carp.weightInKilo}</td>
+            </tr>
+        </c:forEach>
     </table>
     </body>
 </html>
