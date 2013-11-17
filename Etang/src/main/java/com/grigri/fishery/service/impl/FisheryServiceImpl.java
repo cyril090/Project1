@@ -12,13 +12,12 @@ public class FisheryServiceImpl implements FisheryService {
 
 
 	@Autowired
-	private CarpRepository CarpRepository;
+	private CarpRepository carpRepository;
 	
     public List<Carp> findAllCarps() {    
     	
-    	List<Carp> allCarpResult = CarpRepository.findAll();
+    	List<Carp> allCarpResult = carpRepository.findAll();
     	   	
         return allCarpResult;
     }
-
 }
