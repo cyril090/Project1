@@ -23,8 +23,8 @@ public class FishController {
     
     @RequestMapping(value="/fish.html", method=RequestMethod.GET)
     public ModelAndView getFishes() {
-        // TODO instead of using an empty list, use fisheryService.getAllCarps()
-        List<Carp> carps = new ArrayList<Carp>();
+        
+        List<Carp> carps = fisheryService.findAllCarps();
         
         Map<String, Object> model = new HashMap<String, Object>();
         model.put("carps", carps);
