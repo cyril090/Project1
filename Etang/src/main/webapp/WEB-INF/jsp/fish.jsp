@@ -10,7 +10,7 @@
     <body>
         <h1>Poissons</h1>
         <p>
-        <form method ="post" action = "FishController.java">
+        <form method="post" action="/fishes/carp.html"><!-- TODO action is the url to use FishController.java -->
         	<fieldset>
         		<legend>Carpes</legend>
        			<label for="age">Age</label> : <input type="text" name="age" id="age" />
@@ -18,6 +18,9 @@
         		<label for="weightInKilo">Weight</label> : <input type="text" name="weightInKilo" id="weightInKilo" />
        		</fieldset>
         </form>
+        <!-- TODO: the submit button must be inside the <form>, not outside -->
+        <!-- To check that some data is sent upon submit, use Chrome, type "Ctrl + Shift + i" and
+            open the "Network" tab to see requests being submitted -->
         <input type="submit" value="Envoyer" />
         <p>
      <table>

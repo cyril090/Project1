@@ -12,6 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.grigri.fishery.domain.Carp;
 import com.grigri.fishery.service.FisheryService;
+import com.grigri.fishery.web.form.NewCarpForm;
 
 @Controller
 @RequestMapping("/fishes")
@@ -29,6 +30,14 @@ public class FishController {
         model.put("carps", carps);
         
         return new ModelAndView("fish", model);
+    }
+    
+    // TODO add the request mapping annotation for URL /carp.html and method POST
+    public ModelAndView createCarp(NewCarpForm newCarpForm) {
+        // TODO create a new carp object with the values from the newCarpForm
+        // TODO save the carp
+        // TODO return a new model and view with all fishes, similar to getFishes().
+        return null;
     }
 
 }
