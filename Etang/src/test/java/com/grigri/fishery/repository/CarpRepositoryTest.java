@@ -5,6 +5,7 @@ import static org.junit.Assert.assertNotNull;
 
 import java.util.List;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import com.grigri.fishery.domain.Carp;
@@ -15,7 +16,8 @@ public class CarpRepositoryTest {
     private CarpRepository carpRepository = new InMemoryCarpRepository();
     
     @Test
-    public void crud() {
+    @Ignore
+ 	public void crud() {
         // On cree une carpe de 2 ans, qui mesure 40 cms et pese 4 kg.
         Carp carp = new Carp(
                     null, // pas d'ID, l'ID doit etre cree par le repository
