@@ -12,8 +12,8 @@
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>
-            /WEB-INF/spring/service-context.xml
-            /WEB-INF/spring/repository-context.xml
+            classpath:/spring/service-context.xml
+            classpath:/spring/repository-context.xml
         </param-value>
     </context-param>
 
