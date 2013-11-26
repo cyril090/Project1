@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.grigri.fishery.domain.Carp;
+import com.grigri.fishery.repository.CarpRepository;
 import com.grigri.fishery.service.FisheryService;
 import com.grigri.fishery.web.form.NewCarpForm;
 
@@ -32,12 +33,13 @@ public class FishController {
         return new ModelAndView("fish", model);
     }
     
-    // TODO add the request mapping annotation for URL /carp.html and method POST
-    public ModelAndView createCarp(NewCarpForm newCarpForm) {
-        // TODO create a new carp object with the values from the newCarpForm
-        // TODO save the carp
-        // TODO return a new model and view with all fishes, similar to getFishes().
-        return null;
+    @RequestMapping(value="/carp.html", method=RequestMethod.POST)
+        public ModelAndView createCarp(NewCarpForm newCarpForm) {
+    	Carp carp = new Carp(null,newCarpForm.getAge(),newCarpForm.getLengthInCms(),newCarpForm.getWeightInKilo());
+    	CarpRepository.save(carp); 
+    	return new ModelAndView("fish");
+    	}
+        
     }
 
-}
+

@@ -17,11 +17,11 @@
         		<label for="lengthInCms">Length</label> : <input type="text" name="lengthInCms" id="lengthInCms" />
         		<label for="weightInKilo">Weight</label> : <input type="text" name="weightInKilo" id="weightInKilo" />
        		</fieldset>
+       		<input type="submit" value="Envoyer" />
         </form>
-        <!-- TODO: the submit button must be inside the <form>, not outside -->
-        <!-- To check that some data is sent upon submit, use Chrome, type "Ctrl + Shift + i" and
+            <!-- To check that some data is sent upon submit, use Chrome, type "Ctrl + Shift + i" and
             open the "Network" tab to see requests being submitted -->
-        <input type="submit" value="Envoyer" />
+       
         <p>
      <table>
         <tr>
