@@ -36,7 +36,12 @@ public class FishController {
     @RequestMapping(value="/carp.html", method=RequestMethod.POST)
         public ModelAndView createCarp(NewCarpForm newCarpForm) {
     	Carp carp = new Carp(null,newCarpForm.getAge(),newCarpForm.getLengthInCms(),newCarpForm.getWeightInKilo());
-    	CarpRepository.save(carp); 
+    	// TODO create a method 'saveCarp' in the FisheryService.
+    	// This method will call save on the carpRepsitory instance variable.
+    	// Call this 'saveCarp' method from here.
+    	CarpRepository.save(carp);
+    	
+    	// TODO return getFishes, to have all the carps in the model.
     	return new ModelAndView("fish");
     	}
         
