@@ -7,5 +7,6 @@ import com.grigri.fishery.domain.Carp;
 public interface FisheryService {
 
     List<Carp> findAllCarps();
+    Carp saveCarp(Carp carp);
 
 }

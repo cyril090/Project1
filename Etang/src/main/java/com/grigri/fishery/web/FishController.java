@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.grigri.fishery.domain.Carp;
-import com.grigri.fishery.repository.CarpRepository;
 import com.grigri.fishery.service.FisheryService;
 import com.grigri.fishery.web.form.NewCarpForm;
 
@@ -36,15 +35,9 @@ public class FishController {
     @RequestMapping(value="/carp.html", method=RequestMethod.POST)
         public ModelAndView createCarp(NewCarpForm newCarpForm) {
     	Carp carp = new Carp(null,newCarpForm.getAge(),newCarpForm.getLengthInCms(),newCarpForm.getWeightInKilo());
-    	// TODO create a method 'saveCarp' in the FisheryService.
-    	// This method will call save on the carpRepsitory instance variable.
-    	// Call this 'saveCarp' method from here.
-    	CarpRepository.save(carp);
-    	
-    	// TODO return getFishes, to have all the carps in the model.
-    	return new ModelAndView("fish");
+    	fisheryService.saveCarp(carp);
+    	return getFishes();
     	}
-        
     }
 
 
